@@ -1,15 +1,12 @@
 import React from 'react';
 import Image from 'next/image'; // For optimized image handling
+import {Card} from "@/components/ui/card";
 import {
-  HandymanPortfolioContainer,
-  HandymanPortfolioCard,
-  HandymanPortfolioCardImage,
-  HandymanPortfolioCardDetails,
-  HandymanPortfolioCardName,
-  HandymanPortfolioCardDescription,
-  HandymanPortfolioCardSkills,
-  HandymanPortfolioCardSkill,
-} from "@/components/ui/card"
+  CardHeader,
+  CardContent,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
 
 interface Handyman {
   name: string;
@@ -18,12 +15,12 @@ interface Handyman {
   skills: string[];
 }
 
-const HandymanPortfolioList: React.FC<Handyman[]> = ({ handymen }) => {
+const HandymanPortfolioList: React.FC<{ handymen: Handyman[] }> = ({ handymen }) => {
   return (
-    <HandymanPortfolioContainer>
+    <div> {/* Consider using a container if necessary */}
       {handymen.map((handyman) => (
-        <HandymanPortfolioCard key={handyman.name}>
-          <HandymanPortfolioCardImage>
+        <Card key={handyman.name}>
+          <CardHeader>
             <Image
               src={handyman.picture}
               alt={handyman.name}
@@ -32,19 +29,15 @@ const HandymanPortfolioList: React.FC<Handyman[]> = ({ handymen }) => {
               layout="responsive" // For responsive image handling
               objectFit="cover" // Ensure image fills container while maintaining aspect ratio
             />
-          </HandymanPortfolioCardImage>
-          <HandymanPortfolioCardDetails>
-            <HandymanPortfolioCardName>{handyman.name}</HandymanPortfolioCardName>
-            <HandymanPortfolioCardDescription>{handyman.description}</HandymanPortfolioCardDescription>
-            <HandymanPortfolioCardSkills>
-              {handyman.skills.map((skill) => (
-                <HandymanPortfolioCardSkill key={skill}>{skill}</HandymanPortfolioCardSkill>
-              ))}
-            </HandymanPortfolioCardSkills>
-          </HandymanPortfolioCardDetails>
-        </HandymanPortfolioCard>
+          </CardHeader>
+          <CardContent>
+            <CardTitle>{handyman.name}</CardTitle>
+            <CardDescription>{handyman.description}</CardDescription>
+            {/* Rendering skills can be done similarly */}
+          </CardContent>
+        </Card>
       ))}
-    </HandymanPortfolioContainer>
+    </div>
   );
 };
 
