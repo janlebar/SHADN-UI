@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import HandymanPortfolioList from "@/components/handyman/handyman"
+import { handymanProfiles } from "@/components/handyman/demo"
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
 </Avatar>
       <Button>Click me</Button>
 
-      <HandymanPortfolioList></HandymanPortfolioList>
+      <HandymanPortfolioList handymen={handymanProfiles} />
 
 
     </div>
