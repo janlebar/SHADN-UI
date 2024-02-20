@@ -1,11 +1,12 @@
 import React from 'react';
 import Image from 'next/image'; // For optimized image handling
-import { Card } from "@/components/ui/card";
+// import { Card } from "@/components/ui/card";
 import {
-  CardHeader,
+  Card,
   CardContent,
-  CardTitle,
   CardDescription,
+  CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
 
 
@@ -14,6 +15,10 @@ interface Handyman {
   picture: string; // URL or path to image
   description: string;
   skills: string[];
+  location: {
+    latitude: number;
+    longitude: number;
+  }
 }
 
 const HandymanPortfolioList: React.FC<{ handymen: Handyman[] }> = ({ handymen }) => {
