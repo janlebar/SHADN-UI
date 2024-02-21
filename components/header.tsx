@@ -2,6 +2,7 @@
 
 import React, { FC } from "react";
 import { Input, InputProps } from "@/components/ui/input";
+import { LocationButton } from "./ui/customUI/locationbutton";
 
 interface HeaderProps {
   // Any additional props for the header
@@ -14,8 +15,11 @@ const Header: FC<HeaderProps> = () => {
         <div className="flex justify-between items-center">
           {/* Your logo or title can go here */}
           <h1 className="text-xl font-bold">Your Logo</h1>
+             {/* Search Input */}
 
-          {/* Search Input */}
+        <div className="flex-1 ml-4">
+             <LocationButton></LocationButton>
+        </div>
           <div className="flex-1 ml-4">
             <SearchInput placeholder="Search..." />
           </div>
