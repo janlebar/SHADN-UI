@@ -3,6 +3,8 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 import locationIcon from "@/public/images/location.svg"; // Import the SVG icon
+import { CardWithForm } from "./addlocation"; // Import the AddLocation component
+
 
 // Define button variants
 const buttonVariants = cva(
@@ -62,7 +64,14 @@ const LocationButton = ({ children, ...props }) => {
     <LocattionButton {...props}>
       <img src={locationIcon.src} alt="Location" className="w-6 h-6 mr-2" />
       {children}
+      <CardWithForm></CardWithForm>
     </LocattionButton>
+
+
+
+
+
+
   );
 };
 
