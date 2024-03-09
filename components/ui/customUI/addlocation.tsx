@@ -28,36 +28,36 @@ export const CardWithForm: React.FC<CardWithFormProps> = ({ onCancel }) => {
     <div className="flex justify-center items-center h-screen w-screen fixed top-0 left-0 z-50">
       <Card className="w-[350px] z-50">
         <CardHeader>
-          <CardTitle>Create project</CardTitle>
-          <CardDescription>Deploy your new project in one-click.</CardDescription>
+          <CardTitle>Location</CardTitle>
+          <CardDescription>Change your current location</CardDescription>
         </CardHeader>
         <CardContent>
           <form>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
-                <Label htmlFor="name">Name</Label>
-                <Input id="name" placeholder="Name of your project" />
-              </div>
-              <div className="flex flex-col space-y-1.5">
-                <Label htmlFor="framework">Framework</Label>
+                <Label htmlFor="name">Country</Label>
                 <Select>
                   <SelectTrigger id="framework">
                     <SelectValue placeholder="Select" />
                   </SelectTrigger>
                   <SelectContent position="popper">
-                    <SelectItem value="next">Next.js</SelectItem>
-                    <SelectItem value="sveltekit">SvelteKit</SelectItem>
-                    <SelectItem value="astro">Astro</SelectItem>
-                    <SelectItem value="nuxt">Nuxt.js</SelectItem>
+                    <SelectItem value="next">Slovenia</SelectItem>
+                    <SelectItem value="sveltekit">Austria</SelectItem>
+                    <SelectItem value="astro">Germany</SelectItem>
+                    <SelectItem value="nuxt">Italy</SelectItem>
                   </SelectContent>
                 </Select>
+              </div>
+              <div className="flex flex-col space-y-1.5">
+                <Label htmlFor="framework">Street</Label>
+                <Input id="name" placeholder="Name and street number" />
               </div>
             </div>
           </form>
         </CardContent>
         <CardFooter className="flex justify-between">
           <Button variant="outline" onClick={onCancel}>Cancel</Button>
-          <Button>Deploy</Button>
+          <Button>Next</Button>
         </CardFooter>
       </Card>
     </div>
