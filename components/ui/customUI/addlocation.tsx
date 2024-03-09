@@ -1,4 +1,5 @@
-import * as React from "react";
+// components/ui/CardWithForm.tsx
+import React from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -18,10 +19,13 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-export function CardWithForm() {
+interface CardWithFormProps {
+  onCancel: () => void;
+}
+
+export const CardWithForm: React.FC<CardWithFormProps> = ({ onCancel }) => {
   return (
     <div className="flex justify-center items-center h-screen w-screen fixed top-0 left-0 z-50">
-      {/* Adjust the styles according to your layout */}
       <Card className="w-[350px] z-50">
         <CardHeader>
           <CardTitle>Create project</CardTitle>
@@ -52,10 +56,10 @@ export function CardWithForm() {
           </form>
         </CardContent>
         <CardFooter className="flex justify-between">
-          <Button variant="outline">Cancel</Button>
+          <Button variant="outline" onClick={onCancel}>Cancel</Button>
           <Button>Deploy</Button>
         </CardFooter>
       </Card>
     </div>
   );
-}
+};
