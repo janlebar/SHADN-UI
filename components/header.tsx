@@ -14,7 +14,7 @@ const Header: FC<HeaderProps> = () => {
       <div className="max-w-4xl w-full px-4">
         <div className="flex justify-between items-center">
           {/* Your logo or title can go here */}
-          <h1 className="text-xl font-bold">Your Logo</h1>
+          <h1 className="text-xl font-bold">Logo</h1>
              {/* Search Input */}
 
         <div className="flex-1 ml-4">

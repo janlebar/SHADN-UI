@@ -21,7 +21,7 @@ const LocationButton: React.FC = () => {
 
   return (
     <div>
-      <Button onClick={toggleCard}>Open Card</Button>
+      <Button onClick={toggleCard}>Change location</Button>
       {showCard && <CardWithForm onCancel={handleCancel} />}
     </div>
   );
