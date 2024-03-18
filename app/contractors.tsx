@@ -4,10 +4,9 @@ import HandymanPortfolioList from "@/components/contractors/contractors"
 import { handymanProfiles } from "@/components/contractors/demo"
 import {Header} from "@/components/header"
 import Headerswitch from "@/components/headerswitch"
-import Posts from "@/components/client/posts"
 
 
-export default function Home() {
+export default function ContractorsPage() {
   return (
     <div>
       {/* <Avatar>
@@ -15,13 +14,12 @@ export default function Home() {
   <AvatarFallback>CN</AvatarFallback>
 </Avatar>
       <Button>Click me</Button> */}
-      <Header/>
-      <Headerswitch/>
-      <Posts/>
-      {/* <HandymanPortfolioList handymen={handymanProfiles} /> */}
+      {/* <Header/>
+      <Headerswitch/> */}
+
+      <HandymanPortfolioList handymen={handymanProfiles} />
+
 
     </div>
   )
 }
-
-

@@ -1,5 +1,8 @@
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
+import ContractorsPage from "@/app/contractors"
+
+
 
 const Headerswitch = () => {
   return (
@@ -10,9 +13,10 @@ const Headerswitch = () => {
         </Link>
       </li>
       <li className="mr-4">
-        <Link href="/handyman">
-          <Button className="text-white hover:underline focus:outline-none cursor-pointer">contractrs</Button>
+        <Link href="/contractors">
+        <Button className="text-white hover:underline focus:outline-none cursor-pointer">contractors</Button>
         </Link>
+
       </li>
     </ul>
   );
