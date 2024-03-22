@@ -5,7 +5,8 @@ import { handymanProfiles } from "@/components/contractors/demo"
 import {Header} from "@/components/header"
 import Headerswitch from "@/components/headerswitch"
 import Posts from "@/components/client/posts"
-
+import React from 'react';
+import {clientPosts} from '@/components/client/demo';
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
       <Button>Click me</Button> */}
       <Header/>
       <Headerswitch/>
-      <Posts/>
+      <Posts posts={clientPosts} />
       {/* <HandymanPortfolioList handymen={handymanProfiles} /> */}
 
     </div>
@@ -25,3 +26,14 @@ export default function Home() {
 }
 
 
+
+
+// const MyPage: React.FC = () => {
+//   return (
+//     <div>
+//       <Posts posts={clientPosts} />
+//     </div>
+//   );
+// };
+
+// export default MyPage;
