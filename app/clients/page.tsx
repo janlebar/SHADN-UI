@@ -1,42 +1,33 @@
 'use client';
-import { Form, FormItem, FormLabel, FormControl, FormDescription, FormMessage, FormField } from '@/components/ui/form'
+import * as z from "zod"
+import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { FormField } from "@/components/ui/form";
 
-import { useForm } from 'react-hook-form';
 
 
-const NewPostForm = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
 
-  const onSubmit = (data) => {
-    // Handle form submission here
-    console.log(data);
-  };
+const formSchema = z.object({
+  email: z.string().email()
+});
+
+export default function NewPostForm() {
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      emailAddress: ""
+    }
+  });
+
+  const handleSubmit = () => {}
 
   return (
-    <Form onSubmit={handleSubmit(onSubmit)}>
-      <FormItem>
-        <FormLabel>Title</FormLabel>
-        <FormControl>
-          <input {...register("title", { required: 'Title is required' })} type="text" />
-        </FormControl>
-        {errors.title && <FormMessage>{errors.title.message}</FormMessage>}
-      </FormItem>
-
-      <FormItem>
-        <FormLabel>Content</FormLabel>
-        <FormControl>
-          <textarea {...register("content", { required: 'Content is required' })}></textarea>
-        </FormControl>
-        {errors.content && <FormMessage>{errors.content.message}</FormMessage>}
-      </FormItem>
-
-      <FormItem>
-        <button type="submit">Submit</button>
-      </FormItem>
-    </Form>
+    <main className= "flex min-h-screen flex-col items-center justify-between p-24">
+      <Form{...form}>
+        <form onSubmit={form.handleSubmit(handleSubmit)}>
+          <FormField control={form.control} name="emailAddress" render={}/>
+        </form>
+      </Form>
+    </main>
   );
-};
-
-export default NewPostForm;
-
-
+}
