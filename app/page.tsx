@@ -4,9 +4,9 @@ import HandymanPortfolioList from "@/components/contractors/contractors"
 import { handymanProfiles } from "@/components/contractors/demo"
 import {Header} from "@/components/header"
 import Headerswitch from "@/components/headerswitch"
-import Posts from "@/components/client/posts"
+
 import React from 'react';
-import {clientPosts} from '@/components/client/demo';
+
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
       <Button>Click me</Button> */}
       <Header/>
       <Headerswitch/>
-      <Posts posts={clientPosts} />
+      {/* <Posts posts={clientPosts} /> */}
       {/* <HandymanPortfolioList handymen={handymanProfiles} /> */}
 
     </div>
