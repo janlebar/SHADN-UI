@@ -4,12 +4,14 @@ import HandymanPortfolioList from "@/components/contractors/contractors"
 import { handymanProfiles } from "@/components/contractors/demo"
 import {Header} from "@/components/header"
 import Headerswitch from "@/components/headerswitch"
-
+import Posts from "@/components/client/posts"
 import React from 'react';
-
+// import MyComponentPage from "@/components/landingpage";
+import {clientPosts} from '@/components/client/demo';
+import Map from './landingpage/page';
 
 export default function Home() {
-  return (
+  return ( 
     <div>
       {/* <Avatar>
   <AvatarImage src="https://www.shutterstock.com/image-vector/young-smiling-man-avatar-brown-600nw-2261401207.jpg" />
@@ -18,6 +20,7 @@ export default function Home() {
       <Button>Click me</Button> */}
       <Header/>
       <Headerswitch/>
+      <Map/>
       {/* <Posts posts={clientPosts} /> */}
       {/* <HandymanPortfolioList handymen={handymanProfiles} /> */}
 
