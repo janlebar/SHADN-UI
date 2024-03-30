@@ -1,25 +1,18 @@
+"use client";
+
 import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
-import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
+import Map from '@/components/map';
+import dynamic from "next/dynamic";
 
-interface MapProps {
-  center: [number, number]; // Replace with your desired center coordinates (e.g., [latitude, longitude])
-  zoom: number;
-}
+const LazyMap = dynamic(() => import("@/components/map"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
 
-const Map: React.FC<MapProps> = ({ center, zoom }) => {
+export default function Home() {
   return (
-    <MapContainer center={center} zoom={zoom} style={{ height: '400px' }}>
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      <Marker position={center}>
-        <Popup>You are here!</Popup>
-      </Marker>
-    </MapContainer>
+    <main>
+      <LazyMap />
+    </main>
   );
-};
-
-export default Map;
+}

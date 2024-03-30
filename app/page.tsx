@@ -8,7 +8,7 @@ import Posts from "@/components/client/posts"
 import React from 'react';
 // import MyComponentPage from "@/components/landingpage";
 import {clientPosts} from '@/components/client/demo';
-import Map from './landingpage/page';
+// import Map from './landingpage/page';
 
 export default function Home() {
   return ( 
@@ -20,7 +20,7 @@ export default function Home() {
       <Button>Click me</Button> */}
       <Header/>
       <Headerswitch/>
-      <Map/>
+      {/* <Map/> */}
       {/* <Posts posts={clientPosts} /> */}
       {/* <HandymanPortfolioList handymen={handymanProfiles} /> */}
 
