@@ -11,11 +11,10 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 import React, { useState, useEffect } from 'react';
 import LocationComponent from './location'; // Update the path as per your project structure
-
-
-
+import AddMarker from "./addmarker";
 export default function Map() {
   const [userLocation, setUserLocation] = useState(null);
+  const [mapInstance, setMapInstance] = useState(null);
 
   useEffect(() => {
     const handleUserLocation = (event) => {
@@ -40,6 +39,7 @@ export default function Map() {
           zoom={11}
           scrollWheelZoom={true}
           style={{ height: '400px', width: '600px' }}
+          whenCreated={setMapInstance}
         >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -50,6 +50,8 @@ export default function Map() {
               This Marker icon is displayed correctly with <i>leaflet-defaulticon-compatibility</i>.
             </Popup>
           </Marker>
+          {/* Pass mapInstance to AddMarker component */}
+          {mapInstance && <AddMarker map={mapInstance} />}
         </MapContainer>
       )}
     </div>
