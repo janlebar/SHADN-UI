@@ -1,0 +1,5 @@
+{
+  "model": "llama2",
+  "created_at": "2024-05-17T11:53:57.915185356Z",
+  "response": "\nHere is the CSV response with the assessed relevance for each result:\n\n| URL | Relevance Score |\n| --- | --- |\n| https://en.wikipedia.org/wiki/Coffee | 9 |\n| https://www.britannica.com/topic/coffee | 8 |\n| https://www.coffeebeanery.com/ | 7 |\n| https://www.hsph.harvard.edu/nutritionsource/food-features/coffee/ | 6 |\n| https://www.coffeebean.com/ | 5 |\n| https://www.delish.com/food-news/a46444296/is-coffee-good-for-you/ | 4 |\n| https://www.greenbaypressgazette.com/story/news/local/door-co/2024/05/17/new-owners-of-year-round-sister-bay-coffee-shop-to-expand-summer-hours/ | 3 |\n| https://www.visitestespark.com/blog/post/pick-your-perfect-coffee-shop/ | 2 |\n| https://www.usatoday.com/story/life/health-wellness/2024/05/12/how-is-decaf-coffee-made/ | 1 |\n\nNote: The relevance score is based on a subjective assessment of the relevance of each result to the given query. A higher score indicates a more relevant result."
+}
