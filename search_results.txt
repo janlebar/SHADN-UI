@@ -1,0 +1,5 @@
+{
+  "model": "llama2",
+  "created_at": "2024-05-17T12:07:44.026451032Z",
+  "response": "\nHere is the CSV response:\n\n| URL | Relevance Score |\n| --- | --- |\n| https://en.wikipedia.org/wiki/Coffee | 9 |\n| https://www.britannica.com/topic/coffee | 8 |\n| https://www.starbucks.com/ | 7 |\n| https://www.ncausa.org/About-Coffee/What-is-Coffee | 6 |\n| https://www.hopkinsmedicine.org/health/wellness-and-prevention/9-reasons-why-the-right-amount-of-coffee-is-good-for-you | 5 |\n| https://www.healthline.com/nutrition/top-evidence-based-health-benefits-of-coffee | 4 |\n| https://www.tripadvisor.com/Restaurants-g52055-c8-Scappoose_Oregon.html | 3 |\n| https://www.facebook.com/kandiskoffeesouth/ | 2 |\n| https://www.yelp.com/search?find_desc=coffee+shops&find_loc=Scappoose%2C+OR | 1 |\n\nNote: The relevance score is based on a subjective assessment of the URL's relevance to the query \"coffee\". A higher score indicates a more relevant URL."
+}
