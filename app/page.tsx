@@ -9,6 +9,14 @@ import React from 'react';
 // import MyComponentPage from "@/components/landingpage";
 import {clientPosts} from '@/components/client/demo';
 import Hero from "./landingpage/page"
+import {
+  type CarouselApi,
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel"; 
 // import Map from './landingpage/page';
 
 export default function Home() {
@@ -25,6 +33,17 @@ export default function Home() {
       {/* <Map/> */}
       {/* <Posts posts={clientPosts} /> */}
       {/* <HandymanPortfolioList handymen={handymanProfiles} /> */}
+
+
+      <Carousel>
+        <CarouselContent>
+          <CarouselItem>Slide 1</CarouselItem>
+          <CarouselItem>Slide 2</CarouselItem>
+          <CarouselItem>Slide 3</CarouselItem>
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
 
     </div>
   )
