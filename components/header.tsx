@@ -2,7 +2,8 @@
 
 import React, { FC } from "react";
 import { Input, InputProps } from "@/components/ui/input";
-import { LocationButton } from "./ui/customUI/locationbutton";
+import { LocationButton } from "./ui/components/location/locationbutton";
+import ChatPage from "./ui/components/chat/chat"
 
 interface HeaderProps {
   // Any additional props for the header
@@ -23,7 +24,9 @@ const Header: FC<HeaderProps> = () => {
           <div className="flex-1 ml-4">
             <SearchInput placeholder="Search..." />
           </div>
-
+          <div className="flex-1 ml-4">
+           <ChatPage/>
+          </div>
           {/* Other header elements can go here */}
         </div>
       </div>

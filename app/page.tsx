@@ -41,7 +41,8 @@ export default function Home() {
                   <p className="text-center mt-2">{image.title}</p>
                 </div>
               </CarouselItem>
-            ))}
+            ))}Login
+
           </CarouselContent>
           <CarouselPrevious className={orientation === "horizontal" 
                     ? "left-5 top-1/2 -translate-y-1/2"
