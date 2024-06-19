@@ -21,16 +21,18 @@ import { getCarouselImages } from '@/lib/getCarouselImages';
 export default function Home() {
     const [api, setApi] = React.useState<CarouselApi | null>(null); // Initialized to null for type safety
     const images = getCarouselImages();
+    const orientation = "horizontal";
+
   
     return (
       <div>
         <Header />
         <Headerswitch />
-        <Carousel setApi={setApi}>
-          <CarouselContent className="-ml-4">
+        <Carousel setApi={setApi} orientation={orientation}>
+          <CarouselContent>
             {images.map((image, index) => (
-              <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                <div className="flex flex-col items-center justify-center">
+              <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/3 lg:basis-1/4 max-w-xs">
+               <div className="flex flex-col items-center justify-center max-w-md mx-auto p-4">
                   <img
                     src={image.src}
                     alt={image.title}
@@ -41,8 +43,17 @@ export default function Home() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className={orientation === "horizontal" 
+                    ? "left-5 top-1/2 -translate-y-1/2"
+                    : "absolute h-8 w-8 rounded-full -top-12 left-1/2 -translate-x-1/2 rotate-90"}
+                />
+          
+          <CarouselNext className={orientation === "horizontal" 
+                    ? "right-5 top-1/2 -translate-y-1/2"
+                    : "absolute h-8 w-8 rounded-full -top-12 left-1/2 -translate-x-1/2 rotate-90"}
+                />
+
+
         </Carousel>
         <Hero />
        
