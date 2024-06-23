@@ -4,6 +4,7 @@ import React, { FC } from "react";
 import { Input, InputProps } from "@/components/ui/input";
 import { LocationButton } from "./ui/components/location/locationbutton";
 import { ChatButton } from "./ui/components/chat/chatbutton"
+// import { MailDisplay } from "./email/email"
 
 interface HeaderProps {
   // Any additional props for the header
@@ -19,7 +20,7 @@ const Header: FC<HeaderProps> = () => {
              {/* Search Input */}
 
         <div className="flex-1 ml-4">
-             <LocationButton></LocationButton>
+             <LocationButton/>
         </div>
           <div className="flex-1 ml-4">
             <SearchInput placeholder="Search..." />
@@ -27,7 +28,7 @@ const Header: FC<HeaderProps> = () => {
           <div className="flex-1 ml-4">
            <ChatButton/>
           </div>
-          {/* Other header elements can go here */}
+          {/* <MailDisplay/> */}
         </div>
       </div>
     </header>

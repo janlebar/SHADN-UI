@@ -18,6 +18,12 @@ const Headerswitch = () => {
         </Link>
 
       </li>
+      <li className="mr-4">
+        <Link href="/email">
+        <Button className="text-white hover:underline focus:outline-none cursor-pointer">Email</Button>
+        </Link>
+
+      </li>
     </ul>
   );
 };

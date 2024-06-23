@@ -20,7 +20,7 @@ const ChatButton: React.FC = () => {
 
   return (
     <div>
-    <div className=" fixed z-50">
+    <div className=" fixed z-50 ">
       <Button onClick={toggleCard}>Chat</Button>
       {showCard && (
         <Card>
