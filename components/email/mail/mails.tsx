@@ -32,10 +32,10 @@ import {
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { AccountSwitcher } from "./account-switcher"
 import { MailDisplay } from "./mail-display"
-import { MailList } from "./mail-list.tsx"
-import { Nav } from "@/app/(app)/examples/mail/components/nav"
-import { type Mail } from "@/app/(app)/examples/mail/data"
-import { useMail } from "@/app/(app)/examples/mail/use-mail"
+import { MailList } from "./mail-list"
+import { Nav } from "./nav"
+import { type Mail } from "./data"
+import { useMail } from "./use-mail"
 
 interface MailProps {
   accounts: {

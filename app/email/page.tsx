@@ -1,7 +1,7 @@
 // import { Button } from "@/components/ui/button"
 // import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { MailDisplay } from "@/components/email/email"
-import { mails } from "@/components/email/data"
+// import { MailDisplay } from "@/components/email/email"
+import MailPage from "@/components/email/email"
 import {Header} from "@/components/header"
 import Headerswitch from "@/components/headerswitch"
 
@@ -11,8 +11,8 @@ export default function ContractorsPage() {
     <div>
       <Header/>
       <Headerswitch/>
-      <MailDisplay mail={null}/>
-
+      {/* <MailDisplay mail={null}/> */}
+    <MailPage/>
 
     </div>
   )
