@@ -24,6 +24,12 @@ const Headerswitch = () => {
         </Link>
 
       </li>
+      <li className="mr-4">
+        <Link href="/authentication">
+        <Button className="text-white hover:underline focus:outline-none cursor-pointer">authentication</Button>
+        </Link>
+
+      </li>
     </ul>
   );
 };
