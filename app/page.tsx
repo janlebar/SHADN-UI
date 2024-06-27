@@ -3,7 +3,6 @@
 import HandymanPortfolioList from "@/components/contractors/contractors";
 import { handymanProfiles } from "@/components/contractors/demo";
 import { Header } from "@/components/header";
-import Headerswitch from "@/components/headerswitch";
 import Posts from "@/components/client/posts";
 import React from 'react';
 import { clientPosts } from '@/components/client/demo';
@@ -27,7 +26,7 @@ export default function Home() {
     return (
       <div>
         <Header />
-        <Headerswitch />
+
         <Carousel setApi={setApi} orientation={orientation}>
           <CarouselContent>
             {images.map((image, index) => (
