@@ -1,5 +1,5 @@
 'use client';
-import * as React from "react";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import dynamic from "next/dynamic";
 import { Card } from "@/components/ui/card";
@@ -19,18 +19,18 @@ const ChatButton: React.FC = () => {
   };
 
   return (
-    <div>
-    <div className=" fixed z-50 ">
+    <div className="relative">
       <Button onClick={toggleCard}>Chat</Button>
       {showCard && (
-        <Card>
-          <div className="p-4">
-            <Button onClick={handleCancel}>Close</Button>
-            <ChatPage />
-          </div>
-        </Card>
+        <div className="absolute top-full mt-2 right-0 z-50">
+          <Card className="w-64">
+            <div className="p-4">
+              <Button onClick={handleCancel}>Close</Button>
+              <ChatPage />
+            </div>
+          </Card>
+        </div>
       )}
-    </div>
     </div>
   );
 };

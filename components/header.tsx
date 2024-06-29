@@ -1,9 +1,7 @@
-// components/Header.tsx
-
 import React, { FC } from "react";
 import { Input, InputProps } from "@/components/ui/input";
 import { LocationButton } from "./ui/components/location/locationbutton";
-import { ChatButton } from "./ui/components/chat/chatbutton"
+import { ChatButton } from "./ui/components/chat/chatbutton";
 import Headerswitch from "@/components/headerswitch";
 // import { MailDisplay } from "./email/email"
 
@@ -13,31 +11,34 @@ interface HeaderProps {
 
 const Header: FC<HeaderProps> = () => {
   return (
-    <header className="flex items-center justify-center py-4">
-      <div className="max-w-4xl w-full px-4">
-        <div className="flex justify-between items-center">
-          {/* Your logo or title can go here */}
-          <h1 className="text-xl font-bold">Logo</h1>
-             {/* Search Input */}
-
-        <div className="flex-1 ml-4">
-             <LocationButton/>
-        </div>
-          <div className="flex-1 ml-4">
-            <SearchInput placeholder="Search..." />
+    <header className="">
+      <div className="py-4 flex items-center">
+        <h1 className="text-xl font-bold mr-4 pl-4">Logo</h1>
+        <div className="flex-1">
+          <div className="flex justify-center items-center max-w-4xl w-full px-4 mx-auto">
+            <div className="flex items-center">
+              <div className="ml-4">
+                <LocationButton />
+              </div>
+              <div className="ml-4">
+                <SearchInput placeholder="Search..." />
+              </div>
+              <div className="ml-4">
+                <ChatButton />
+              </div>
+            </div>
+            <div className="ml-auto pl-8">
+              <Headerswitch />
+            </div>
           </div>
-          <div className="flex-1 ml-4">
-           <ChatButton/>
-          </div>
-          {/* <MailDisplay/> */}
-          <div className="ml-auto pl-8">
-             <Headerswitch/>
-        </div>
         </div>
       </div>
     </header>
   );
 };
+
+export default Header;
+
 
 interface SearchInputProps extends InputProps {
   placeholder?: string;
