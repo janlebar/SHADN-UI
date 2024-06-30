@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { Input, InputProps } from "@/components/ui/input";
 import { LocationButton } from "./ui/components/location/locationbutton";
 import { ChatButton } from "./ui/components/chat/chatbutton";
-import Headerswitch from "@/components/headerswitch";
+import ProfileMenu from "@/components/headerswitch";
 // import { MailDisplay } from "./email/email"
 
 interface HeaderProps {
@@ -27,11 +27,9 @@ const Header: FC<HeaderProps> = () => {
                 <ChatButton />
               </div>
             </div>
-            <div className="ml-auto pl-8">
-              <Headerswitch />
-            </div>
           </div>
         </div>
+        <div className="mr-4 pr-4"><ProfileMenu /></div>
       </div>
     </header>
   );

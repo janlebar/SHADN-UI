@@ -1,13 +1,13 @@
 import AuthenticationPage from "@/components/authentication/authentication"
 import {Header} from "@/components/header"
-import Headerswitch from "@/components/headerswitch"
+import ProfileMenu from "@/components/headerswitch"
 
 
 export default function ContractorsPage() {
   return (
     <div>
       <Header/>
-      <Headerswitch/>
+      <ProfileMenu/>
       {/* <MailDisplay mail={null}/> */}
     <AuthenticationPage/>
 
