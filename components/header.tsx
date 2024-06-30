@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { Input, InputProps } from "@/components/ui/input";
 import { LocationButton } from "./ui/components/location/locationbutton";
 import { ChatButton } from "./ui/components/chat/chatbutton";
-import ProfileMenu from "@/components/headerswitch";
+import ProfileMenu from "@/components/profilemenu";
 // import { MailDisplay } from "./email/email"
 
 interface HeaderProps {
