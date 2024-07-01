@@ -3,6 +3,7 @@ import { Input, InputProps } from "@/components/ui/input";
 import { LocationButton } from "./ui/components/location/locationbutton";
 import { ChatButton } from "./ui/components/chat/chatbutton";
 import ProfileMenu from "@/components/profilemenu";
+import Link from 'next/link';
 // import { MailDisplay } from "./email/email"
 
 interface HeaderProps {
@@ -13,7 +14,7 @@ const Header: FC<HeaderProps> = () => {
   return (
     <header className="">
       <div className="py-4 flex items-center">
-        <h1 className="text-xl font-bold mr-4 pl-4">Logo</h1>
+      <Link className="text-xl font-bold mr-4 pl-4" href="/">Logo</Link>
         <div className="flex-1">
           <div className="flex justify-center items-center max-w-4xl w-full px-4 mx-auto">
             <div className="flex items-center">
